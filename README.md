@@ -42,14 +42,39 @@ Carry = AB + ACin+BCin
 
 
 ## Program:
+```py
+1.Half adder:
+module exp3a(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule
 
+2.Full adder:
+module exp3b(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+wire x,p,q,r;
+xor(x,b,c);
+xor(sum,x,a);
+and(p,a,b);
+and(q,b,c);
+and(r,a,c);
+or(carry,p,q,r);
+endmodule
+```
 
 ## RTL Schematic:
+![image](https://github.com/kanishka2305/Adder/assets/113497357/8e0a90bd-df99-41b3-a36f-14d5256f9cf8)
+
 
 
 
 
 ## Timing Diagram:
+![image](https://github.com/kanishka2305/Adder/assets/113497357/b0692fb2-12ec-48d7-8dc3-4c39c0612654)
+
 
 
 ## Result:
